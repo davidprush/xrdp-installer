@@ -36,6 +36,7 @@ This script automates the installation of xRDP (Remote Desktop Protocol) with op
 
    ```bash
     chmod +x xrdp-installer.py
+    ```
 
 3. **Run the Script**:
     See usage examples below.
@@ -50,29 +51,41 @@ python3 xrdp-installer.py [OPTIONS]
 
 ### Command-Line Options
 
-Flag | Long Form | Description
--c | --custom | Perform custom xRDP installation (compiled from source)
--r | --remove | Remove xRDP packages and configuration
--d | --dev | Use development branch for xRDP (with --custom)
--s | --sound | Enable sound redirection (PipeWire or PulseAudio)
--v | --verbose | Enable detailed output for debugging
- | --cuda | Install NVIDIA CUDA toolkit
- | --nexarian | Use Nexarian's xRDP fork instead of neutrinolabs
+| Flag | Long Form  | Description                                             |
+|------|------------|---------------------------------------------------------|
+| `-c`   | `--custom`   | Perform custom xRDP installation (compiled from source) |
+| `-r`   | `--remove`   | Remove xRDP packages and configuration                  |
+| `-d`   | `--dev`      | Use development branch for xRDP (with `--custom`)         |
+| `-s`   | `--sound`    | Enable sound redirection (PipeWire or PulseAudio)       |
+| `-v`   | `--verbose`  | Enable detailed output for debugging                    |
+|      | `--cuda`     | Install NVIDIA CUDA toolkit                             |
+|      | `--nexarian` | Use Nexarian's xRDP fork instead of neutrinolabs        |
 
 ### Examples
 
 1. Basic xRDP Installation:
-bash
+
+```bash
 python3 xrdp-installer.py
+```
+
 2. Custom xRDP with Sound and CUDA:
-bash
+
+```bash
 python3 xrdp-installer.py -c -s --cuda -v
+```
+
 3. Remove xRDP:
-bash
+
+```bash
 python3 xrdp-installer.py -r
+```
+
 4. Development Build with Nexarian Fork:
-bash
+
+```bash
 python3 xrdp-installer.py -c -d --nexarian
+```
 
 ### Notes
 
@@ -102,4 +115,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Expand the "Troubleshooting" section with specific known issues as they arise.
 - Update the "Website" link if you have a specific page for this script.
 
-This README provides clear instructions, usage examples, and essential information for users of the `xrdp-installer.py` script.
+This README provides clear instructions, usage examples, and essential information for users of the `xrdp-installer.py` script.|
